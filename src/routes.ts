@@ -23,6 +23,7 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
 
     }catch(err){
       console.log(err)
+      return reply.code(400).send({ message: "Erro ao processar a requisição"})
     }
 
 
